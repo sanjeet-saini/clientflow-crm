@@ -41,7 +41,7 @@ import {
   money,
   removeCustomer,
   today,
-  uid,_
+  uid,
 } from "./data";
 
 // Naam se initials banana: "Aarav Mehta" → "AM" (avatar circle ke liye)
