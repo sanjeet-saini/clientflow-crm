@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.npm-cache/
+INTERVIEW_GUIDE_HINGLISH.md

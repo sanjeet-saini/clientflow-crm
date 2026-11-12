@@ -37,9 +37,11 @@ React, Vite, JavaScript, React Router, Lucide icons and plain CSS.
 Deleting a customer also deletes their linked leads and tasks; confirmation names the linked record count. Dashboard totals are calculated rather than stored separately. Blank names/titles, invalid emails/phone formats and negative deal values are rejected. Data is seeded only when storage is missing or invalid; a valid empty workspace stays empty.
 
 ## Deployment
-Static build output: `dist`. HashRouter uses URLs such as `/#/customers`, so refreshing a page works on static hosts without rewrite rules. For GitHub Pages project subpaths build with `npm run build -- --base=./`; for Netlify/Vercel use `npm run build` and publish `dist`.
+Static build output: `dist`. HashRouter uses URLs such as `/#/customers`, so refreshing a page works on static hosts without rewrite rules. `vite.config.js` sets `base: './'`, so the same build works on a GitHub Pages project subpath and on Netlify/Vercel (publish `dist`).
 
-Live publication status and verified checks are recorded in `INTERVIEW_GUIDE_HINGLISH.md`. No public GitHub repository has been created.
+**Live demo:** https://sanjeet-saini.github.io/clientflow-crm/
+
+GitHub Pages is deployed automatically by `.github/workflows/deploy.yml` on every push to `main` (install → test → build → publish `dist`).
 
 ## Limitations
 This is a frontend interview demo, not a production CRM. There is no backend, authentication, cloud database, cross-device synchronization or real integration. localStorage belongs to this browser and origin; clearing browser storage removes the data. Another tab can overwrite changes (no conflict resolution). Use fictional data only. Google Fonts needs internet; system sans-serif is the fallback.
